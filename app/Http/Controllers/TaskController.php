@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Task;
 
 class TaskController extends Controller
 {
@@ -13,7 +14,7 @@ class TaskController extends Controller
      */
     public function index()
     {
-        //
+        return view('tasks.index');
     }
 
     /**
@@ -34,7 +35,8 @@ class TaskController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $task_name = $request->input('task_name');
+        dd($task_name);
     }
 
     /**

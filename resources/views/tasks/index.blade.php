@@ -77,6 +77,7 @@
                             <button type="submit" class="bg-emerald-700 py-4 w-20 text-white md:hover:bg-emerald-800 transition-colors">完了</button>
                           </form>
                         </div>
+                        <button class="bg-yellow-300 py-4 w-20 text-white md:hover:bg-yellow-400 transition-colors">保留</button>
                         <div>
                           <a href="/tasks/{{ $item->id }}/edit/" class="inline-block text-center py-4 w-20 underline underline-offset-2 text-sky-600 md:hover:bg-sky-100 transition-colors">編集</a>
                         </div>
@@ -99,6 +100,18 @@
         @endif
       </div>
     </div>
+    <div class="flex flex-col items-center mb-10">
+    <div class="max-w-sm rounded-lg  overflow-hidden shadow-xl bg-gray-100 md:hover:bg-blue-300">
+  <div class="px-8 py-6">
+    <div class="text-center font-bold text-2xl text-primary">明日やること</div>
+    </div>
+  </div>
+</div>
+<nav class="bg-secondary p-8 shadow-lg">
+  <div class="container mx-auto items-center">
+    <div class="text-white text-center font-bold text-2xl">⚠️保留のタスクがあります⚠️</div>
+  </div>
+</nav>
   </main>
   <footer class="bg-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
@@ -109,11 +122,11 @@
   </footer>
   <script>
     function deleteTask() {
-        if (confirm('本当に削除しますか？')) {
-            return true;
-        } else {
-            return false;
-        }
+      if (confirm('本当に削除しますか？')) {
+        return true;
+      } else {
+        return false;
+      }
     }
   </script>
 </body>
